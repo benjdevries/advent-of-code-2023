@@ -3,7 +3,7 @@ def main():
     result = 0
 
     with open("./input.txt", "r") as f:
-        for line in f.readlines():
+        for line in f:
             game_header, rounds = line.split(":")
 
             print(game_header)

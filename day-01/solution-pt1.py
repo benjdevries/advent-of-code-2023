@@ -6,7 +6,7 @@ def main():
     nums = []
 
     with open("./input.txt", "r") as f:
-        for line in f.readlines():
+        for line in f:
             digits = re.findall(r'\d', line)
             nums.append(int(digits[0] + digits[-1]))
 

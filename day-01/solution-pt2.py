@@ -32,9 +32,9 @@ def main():
     nums = []
 
     with open("./input.txt", "r") as f:
-        for line in f.readlines():
+        for line in f:
             print(f"parsing {line[0:-1]}")
-            # Need to use a positive lookahead here becuase cases like "eighthree"
+            # Need to use a positive lookahead here because cases like "eighthree"
             # should be parsed as 83 even though the 't' is shared.
             digits = re.findall(r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', line)
             print(f"found {digits}")
