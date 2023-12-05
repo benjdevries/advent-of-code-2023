@@ -1,5 +1,4 @@
 def main():
-
     MAX_RED = 12
     MAX_GREEN = 13
     MAX_BLUE = 14
@@ -25,7 +24,11 @@ def main():
 
                 print(drawn)
 
-                is_possible = (drawn["red"] <= MAX_RED) and (drawn["green"] <= MAX_GREEN) and (drawn["blue"] <= MAX_BLUE)
+                is_possible = (
+                    (drawn["red"] <= MAX_RED)
+                    and (drawn["green"] <= MAX_GREEN)
+                    and (drawn["blue"] <= MAX_BLUE)
+                )
                 print("is possible?", is_possible)
 
                 if not is_possible:
@@ -40,7 +43,6 @@ def main():
             print()
 
     print(f"The solution is {result}")
-
 
 
 if __name__ == "__main__":

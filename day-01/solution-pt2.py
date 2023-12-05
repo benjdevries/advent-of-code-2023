@@ -28,7 +28,6 @@ def parse_int_from_word(digit_or_word):
 
 
 def main():
-
     nums = []
 
     with open("./input.txt", "r") as f:
@@ -36,7 +35,9 @@ def main():
             print(f"parsing {line[0:-1]}")
             # Need to use a positive lookahead here because cases like "eighthree"
             # should be parsed as 83 even though the 't' is shared.
-            digits = re.findall(r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', line)
+            digits = re.findall(
+                r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))", line
+            )
             print(f"found {digits}")
 
             first = parse_int_from_word(digits[0])

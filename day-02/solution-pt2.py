@@ -1,5 +1,4 @@
 def main():
-
     result = 0
 
     with open("./input.txt", "r") as f:
@@ -23,7 +22,9 @@ def main():
 
             print("color maxes:", max_for_game)
 
-            game_power = max_for_game["red"] * max_for_game["green"] * max_for_game["blue"]
+            game_power = (
+                max_for_game["red"] * max_for_game["green"] * max_for_game["blue"]
+            )
             print("power:", game_power)
 
             result += game_power
@@ -32,7 +33,6 @@ def main():
             print()
 
     print(f"The solution is {result}")
-
 
 
 if __name__ == "__main__":

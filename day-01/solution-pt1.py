@@ -2,12 +2,11 @@ import re
 
 
 def main():
-
     nums = []
 
     with open("./input.txt", "r") as f:
         for line in f:
-            digits = re.findall(r'\d', line)
+            digits = re.findall(r"\d", line)
             nums.append(int(digits[0] + digits[-1]))
 
     print(f"The solution is {sum(nums)}")
